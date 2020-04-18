@@ -2,7 +2,5 @@
 - name: Install ZooKeeper cluster
   hosts: zookeeper
   roles:
-    - role: lean_delivery.java
-    - role: lean_delivery.zookeeper
-      zk_inventory_group: zookeeper
+    - role: andrewrothstein.zookeeper
     - role: andrewrothstein.zookeeper-cluster
