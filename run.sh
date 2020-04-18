@@ -15,6 +15,6 @@ fi
 time ./terraform apply -auto-approve
 sleep 60
 ansible-playbook disable_selinux.yml
-#ansible-galaxy install andrewrothstein.zookeeper
-#ansible-galaxy install andrewrothstein.zookeeper-cluster
-#ansible-playbook install_zookeeper_cluster.yml
+ansible-galaxy install andrewrothstein.zookeeper
+ansible-galaxy install andrewrothstein.zookeeper-cluster
+ansible-playbook install_zookeeper_cluster.yml
