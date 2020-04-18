@@ -11,6 +11,6 @@ if [ ! -f terraform ]; then
     unzip "$terraform_archive"
 fi
 
-./terraform init
-./terraform apply -auto-approve
-ansible-playbook disable_selinux.yml
+time ./terraform init
+time ./terraform apply -auto-approve
+time ansible-playbook disable_selinux.yml
