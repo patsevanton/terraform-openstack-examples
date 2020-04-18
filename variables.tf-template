@@ -1,0 +1,31 @@
+variable user_name {
+  default     = "login"
+}
+
+variable tenant_name {
+  default     = "tenant"
+}
+
+variable password {
+  default     = "password"
+}
+
+variable auth_url {
+  default     = "https://openstack_auth_url:5000/v2.0"
+}
+
+variable region {
+  default     = "region"
+}
+
+variable network {
+  default     = "network"
+}
+
+variable "zookeper_ip_v4" {
+    default = {
+        0 = "172.26.10.10"
+        1 = "172.26.10.11"
+        2 = "172.26.10.12"
+    }
+}
