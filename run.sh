@@ -11,6 +11,10 @@ if [ ! -f terraform ]; then
     unzip "$terraform_archive"
 fi
 
-time ./terraform init
+./terraform init
 time ./terraform apply -auto-approve
-time ansible-playbook disable_selinux.yml
+ansible-playbook disable_selinux.yml
+ansible-galaxy install lean_delivery.java
+ansible-galaxy install lean_delivery.zookeeper
+ansible-playbook install_zookeeper.yml
+
