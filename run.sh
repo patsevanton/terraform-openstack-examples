@@ -16,5 +16,5 @@ time ./terraform apply -auto-approve
 ansible-playbook disable_selinux.yml
 ansible-galaxy install lean_delivery.java
 ansible-galaxy install lean_delivery.zookeeper
+ansible-galaxy install andrewrothstein.zookeeper-cluster
 ansible-playbook install_zookeeper.yml
-

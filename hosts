@@ -1,4 +1,7 @@
 [zookeeper]
-172.26.10.10
-172.26.10.11
-172.26.10.12
+172.26.10.10 zookeeper_myid=0
+172.26.10.11 zookeeper_myid=1
+172.26.10.12 zookeeper_myid=2
+
+[zookeeper-quorum]
+host[0:2]
