@@ -13,3 +13,4 @@ fi
 
 ./terraform init
 ./terraform apply -auto-approve
+ansible-playbook disable_selinux.yml
