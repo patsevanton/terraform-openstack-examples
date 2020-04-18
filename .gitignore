@@ -2,3 +2,5 @@ variables.tf
 .terraform
 terraform.tfstate*
 openstack.rc
+terraform_*
+terraform
