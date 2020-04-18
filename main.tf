@@ -17,7 +17,3 @@ resource "openstack_compute_instance_v2" "test" {
   }
 
 }
-
-#output "ip" {
-#  value = openstack_compute_instance_v2.test.network.*.fixed_ip_v4
-#}
