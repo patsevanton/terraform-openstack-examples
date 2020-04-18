@@ -4,14 +4,20 @@ resource "openstack_compute_keypair_v2" "my-cloud-key" {
 }
 
 resource "openstack_compute_instance_v2" "test" {
-  name            = "test-vm"
+  count           = 3
+  name            = "zookeper-${count.index}"
   image_name      = "CentOS_7.6_CloudImage_201901"
-  flavor_name     = "c1.m1.d40"
+  flavor_name     = "c2.m8.d40"
   key_pair        = openstack_compute_keypair_v2.my-cloud-key.name
-  security_groups = ["default"]
+  security_groups = ["any-any"]
 
   network {
     name = var.network
+    fixed_ip_v4 = lookup(var.zookeper_ip_v4,count.index)
   }
+
 }
 
+#output "ip" {
+#  value = openstack_compute_instance_v2.test.network.*.fixed_ip_v4
+#}
