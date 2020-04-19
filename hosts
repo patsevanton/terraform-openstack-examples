@@ -5,3 +5,6 @@
 
 [zookeeper-quorum]
 host[0:2]
+
+[gitlab]
+172.26.10.24
