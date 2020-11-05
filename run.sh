@@ -1,7 +1,7 @@
 #!/bin/bash
 
-./terraform init
-time ./terraform apply -auto-approve
+terraform init
+time terraform apply -auto-approve
 sleep 60
 
 ansible-playbook disable_selinux.yml
